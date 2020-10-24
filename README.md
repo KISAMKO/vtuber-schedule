@@ -7,5 +7,5 @@
 > https://api.live.bilibili.com/xlive/web-ucenter/v2/calendar/GetProgramList（b站部分还没写）
 
 ### 预计实现功能
-youtube/bilibili直播日历json文件生成  
-为完整的项目提供数据支持（挖坑中）
+1. youtube/bilibili直播日历json文件生成  
+2. 为完整的项目提供数据支持（挖坑中）
