@@ -40,8 +40,6 @@ cover_image_host = 'https://img.youtube.com/vi/'
 cover_image_type = '/mqdefault.jpg'  # 封面图清晰度选择 从小到大依次为mqdefault，hqdefault，sddefault，maxresdefault
 
 r = requests.get(url, headers=headers, cookies=cookies, proxies=proxies)
-# r=requests.get('http://192.168.28.190:8080/first.html')
-# r.encoding='utf-8'
 # print(r.text)
 
 soup = BeautifulSoup(r.text, "html.parser")
@@ -82,5 +80,6 @@ date_dict[day_set]['list'] = temp_list
 for i in range(len(date_dict)):
     date_dict[dict[i]] = date_dict.pop(i)
 
-with open('hololive.json', 'w+') as token_file:
-    token_file.write(json.dumps(date_dict,ensure_ascii=False))
+result = json.dumps(date_dict, ensure_ascii=False, indent=4, separators=(',', ':'))
+with open('hololive.json', 'w+', encoding='utf-8') as json_file:
+    json_file.write(result)
