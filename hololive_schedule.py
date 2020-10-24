@@ -52,7 +52,7 @@ for i in range(len(date_msg)):
     date_dict[i] = {'date': date_data[0], 'weekly': weekly_jp_cn[date_data[1]]}
 #print(date_dict)
 
-stream_msg = soup.find_all('a', target='_blank')
+stream_msg = soup.find_all('a', target='_blank',href=re.compile(r'^https://www.youtube.com'))
 
 pattern = re.compile(r'v=(.*?)$')
 day_set = 0
